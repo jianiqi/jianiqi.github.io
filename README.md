@@ -4,7 +4,7 @@
 ### 1.作业1
 本作业以刘雅羲的《数字虚拟空间的策展实践初探——以“全球博物馆珍藏展示在线接力”活动为例》文章为材料，对其进行词频分析，筛选出词频高于10次的热词进行柱状图展示和词频高于5次的热词进行词云制图
 
-[作业1.1链接]文章词频统计图-柱状图.png
+[作业1.1链接](https://github.com/jianiqi/jianiqi.github.io/blob/286bbc2187c6d74738a3305d4d7c1b153b0cddde/%E6%96%87%E7%AB%A0%E8%AF%8D%E9%A2%91%E7%BB%9F%E8%AE%A1%E5%9B%BE-%E6%9F%B1%E7%8A%B6%E5%9B%BE.png)
 [作业1.2链接](https://jianiqi.github.io/wordfreq_file.html)
 
 
