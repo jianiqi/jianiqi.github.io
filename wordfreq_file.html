@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+
+</head>
+<body>
+    <div id="79a70e8f4d5742a7a42fa2c84ee69202" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_79a70e8f4d5742a7a42fa2c84ee69202 = echarts.init(
+            document.getElementById('79a70e8f4d5742a7a42fa2c84ee69202'), 'white', {renderer: 'canvas'});
+            
+        var maskImage_79a70e8f4d5742a7a42fa2c84ee69202 = new Image();
+        maskImage_79a70e8f4d5742a7a42fa2c84ee69202.src = 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAA0JCgsKCA0LCgsODg0PEyAVExISEyccHhcgLikxMC4pLSwzOko+MzZGNywtQFdBRkxOUlNSMj5aYVpQYEpRUk//2wBDAQ4ODhMREyYVFSZPNS01T09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0//wAARCAFEAS4DASIAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAYHBAUBAwgC/8QAQRAAAgEDAQMHCwMCBAYDAAAAAAECAwQRBQYhMQcSFUFRYYETFlRVcZGSlKHR0hQisSNiJEJSwTI0Q3KCojNj8P/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCf9C6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwBgdC6V6ssvl4fYdC6V6ssvl4fYzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwGTSaltVoemTlTutRpeVjxpwzOS9qWceJB9udsK1zdVdL0us6dtSbhVqRbTqSW5pNcIrhu3t9xBerHVxAt58o+gJ4X6xrtVHd/JlW23ezlxud/5FvgqtOUfrjH1KXAHoS1vrS9hz7O5o149tOal/BknnWlVqUKiqUKk6VRcJQk4teK3kn0nb7W7BqNepG9orjGsv3L2SW/35AuMEV0XbnR9U5tKrVdlcPd5Ou0k33S4PxwyUpppNNNNZQHIAAAAAAAAAAAAAAAAAAAAAAAAOq4r0rajKtcVYUqcVvlNpJe1shetco+n2spUtLpO9qLd5R5jTT9vF+C8QJznfgwL7WdM07/AJ6/t6LXVKos+7iU7qu1uuapzlWvp0qT/wClQ/pxx2PG9+LNHxbb3t8W+LAuOvyg7O0ZNQua1bHXToyf8pHXT5RdnpySlO6pp9cqDx9MlQPeAL803W9M1VN6ffUa7XGMZYkvanvXuNink860qlShWjWo1J06kHmM4yaafamt5a2wm1c9YpOw1CS/W0o86M8JeVj1trtXXjjxAmgAAGu1+7lY6Df3dPPPo285Rx1NJ4+psTWbRUP1Ozuo0ePPtqiXtw8AULv622+tt5ywE8pNcGkwAAAAAAGsrDw0+KZvdC2t1bRHGFGt5a2XGhWbkku58V4bu40QAurZ/bDS9c5tKnP9Pdtf/BVeG/8AtfB+G/uJEmmedE8NPLTTymnhp9qJns3t/e6c42+q8+7ttyVRb6kF7f8AMvbv7wLZBh6dqNnqdrG6sbiFalLri+Hc1xT7mZgAju3F1qFlszcXWmVXTrUpRlKSSbUc78Z8PAkR03VvTurWrb1knTqwcJLtTWGB1aXc/rNMtLptN1qMZvHDLSb+plkd2JnOGh9H1nmtp1adrP8A8XlPxTRIgAAAEY291O703QY9HVHTuq9eNGm44zvy92evcl4knIvq9NaptjpVi0nSsYSvaq4rOebBPxy/ACRW3lVbUlXadXmLn44c7G/65O4LgAAODTa/tJp2g0edeVedWazChB5nPw6l3sDcSlGMXKTSSWW28IhW0PKDY2LnQ0mKvLhbnPP9OL9q3y8N3eQjaHa3U9elKnUn5C0zut6baTX9z4y/juNABsNW1nUNYreU1G6nVxvjDhCPsity9vE14AAAAAAANns1dzstpNPr0201XhFpPipPmte5msNjs7Q/UbR6bRxnnXNPK7k039EwL8AAA+KkFUpyhLhJNP2M+w0B53uqErW7rW0liVGpKm17G1/sdRJ+ULTXYbUVqii1Su0q0X1Z4SXvWfEjAAAAAAAAAAAAZ2k6tfaPdq50+vKlLcpR4xmuxrrX/wCRauy+2dlrijbV2ra+4eTb/bU74t8fY9/tKcOU2mmm008pp4afU00B6MBXWxe27qyp6brVX97ajRuZbuc+CjJ9vY+vrLFW9AR6kuj9ta1PGKWqW6qLs8rT3P3xafgSFEf2ti6FlbarTWZ6bcRrvHF03+2a+Ft+BvYSjOClBpxaymuDT6wPsAACP7MpXl3qesPerq4dKi//AKqf7Vjub5z8TK2lvZWGg3dajjy8o+TorrdST5sfqzJ0myhp2lWtlTxihSjDPa0t78Xl+IGafM5RhFyk0klltvckddzcUbW3nXuKkadKnFynOTwopcWyotrtsbjW6k7Wzc6Onp45ucSq98uxdi94Eh2n5QYUefaaC41aiypXLWYxf9q633vd7SuK9etc15V7ipOrVm8ynNttvvZ19gAAAAAAAAAAAASbk8tXc7X20sZjQhKq+7CwvqyMllclWmuNveapOLXlWqNNvrSeW/e0vBgWGAAAAAjG3mi9MaDOdGObq0zVpY4tJfuj4r6pFMrgmuB6MaysFF7WaatK2kvbWEcU+f5SnjgoS3peGWvADTgAAAAAAAAAAAABaHJ9tW72nHSNRq5uYL+hUk99WK6m+uS+q70yrz7oValCtTrUZunVpyUoSi8OLTymgPQd3b07q1rW1VJ060HCa7U1h/yafZC5nPRVZXD/AMTp83a1s9sdyfjHDOzZXXIa/o0LrdGvH9leC/yzXHHc+K9phXsnom1tK+3Ky1VKhXfVCsl+yT9q3e4CUAZOi6uKVpa1bm4moUqUXOcm8YSWWBo9Xl0ltTpmmR307TN7XXY1upp+1tvwJDJqKbbSS45I/sjQrVaFzrV5FxudTmqqi+MKSWKcfdv8TTcpG0TsrRaRaVMXFxHNZxe+FN7sdze/wz2gRvbnaqWsXTsLKp/gKMsNp48tJPi/7V1Lr49hEd4AAAAAAAAAAAAAABkWFpW1C+oWdus1a81CK7M8W+5LL8C+dLsKOmabQsrdYp0IKKb4vtb728vxK45LNNVfU7nUaiyraCp021/mlxfgljxLSQHIAAAAAVjyr2XMvbC/it1SEqMml1p5X0bLOIhymWrr7LOsll21aFR+xvmv+UBUIAAAAAAAAAAAAAAAJFsPrb0XXqbqSxa3OKVZcEsvdLwb9zZbes6bT1bSbixrblVjiMlxhJb1Jd6eGUE+8ujYXV+ltnKLqyzcW39Grni2lufisfUDJ2V1OrqWjpXf/OW05W9yv747m/FYfiYe0c+ltYsdnYPNKp/ibzD/AOlF7o/+T+iOvTJfouUHVbOLxC9t6d1Ff3L9r+5xstJXu0m0OpS/di4jbU32Rgt+PHDAkOoXtDS9Mr3lfEaVCm5NLdnHBL27kih9Qva+pX9e9unmrXk5S35SzwS7kt3gT3lS1d/4fR6M3vSrVkutcIp+OX4IrkAAAAAAAAAAAAAAABptYSy3uSXWwLi5OLJWmydGo1iV1OVZvubwvokSsw9ItlZaTZ2uMeRoxg13pJP6mYAAAAAADX69ZdJaFe2eMutRlGK78ZX1SNgcPgB5z39aw+tdjBudr9Nel7S3luo4pzn5Wn2OMt/0ba8DTAAAAAAAAAAAAAAAl/Jpqbs9oJWk5YpXlNre9ylFNp+7KIgcptNNNp9qeGBYOp7V6XQ27o6nQnO4t6NrKhUdJZzJttYzhNd5l8netaf5K8tKtdU7uvc1K6hPc5RazufBtJPKIHqOrSv9PsbSVrb0lZQcFOnHEpp43t+GcdpzPWKj0KlpSt6EI06zqqvFNVG3ndnxxns3Adet6hPVdZu76TbVao3DPVBbor3JGCAAAAAAAAAAAAAAADZ7M2XSG0dha83MZVlKa7Yx/c/ojWE85K9NdXUbrU5r9lCPkqbfXKW9+5Je8C0UAAAAAAAAAAIRyl6HK+02GpW0HKvZpqoksuVN737nv9jZVO49FySksNJp8VgrnaTk7nOtO50Fw5sm27abwk3/AKXwS7n7wK6Buamym0NOXNekXTfbFKS96Z2U9jto6mObpNZf90ox/lgaIEmewmvxpyqV6Ntb04rMpVbiKUV2trODQXdvC2rOnC6o3GOMqOXDPYm0s+1bgOgAAAAAAAAAAAAAAAAAAAAAAAAGw0vS3qc1SoXtpSrt4VKvNwcvY2mm+7OTbVdgtpKfCyp1F2wrRf8ALQEZBu6myW0NP/i0i4eP9OJfwz6ttjtormaitLq003vlVagl7cvP0A0tGlUr1oUaMJTqTkowillyb3Je8vPZjR46JodvZLDqJc6rJf5pve3/ALexI02yOxdHRJq8vJwuL5LEWk+ZSzx5qfF9WSXrcsAcgAAAAAAAAAAAABo9otpLDZ+159zLn1p58nQi1z5vt7l3s52n16hoGlSuZpTrTfNo0s458vsuLZSt9fXOo3lS7vKrqV6rzKT+iS6kuwDP17aTUterZvKvNoJ5hQpvEI9mV1vvfhg1AAAAAAAAAAAAAAAAAAAAAAAAAAB71glezO3F9o8o29453dksLDeZ01/a2967n4MigA9A6dqFrqdnC7sa0atKa3SXU+xrqfcZhRezO0Vzs/qCrU25282lXo53TXau9dT8HuLssruhfWdK6tZqdGrFSjJdaYGQAAAAAAAAAAAAAAHRe11a2Ne4eMUqcp7+5N/7AU3tzq0tV2lrqMv6Fs3RpJPduf7n4vPuRHTlyc25yeZSbb9reX/JwAAAAAAAAAAAAAAAcyi4tKSabSaT7Gsr6MKMnBzSfNTSb7G84X0YHAAAAAAAAAAAAAAWJyV6tLn3OkVZZil5ajv4b0pL6p+8rs3uxNz+k2t06awlOo6Us9akmv5wBeACAAAAAAAAAAAADSbY1nR2S1Sa4/p5R3d+7/c3ZG+UGShsZf5TeVFe+aApZ8X3AdoAAAAAAAAAAAAcpOX7Unl7l7XwODa7LWf6/aXTrdrMXWUpruj+5/wB2bW2isdoa9tHCVKnRj4qnFP6oafZ/qNltZrpNu2qW8012Zmn9GjP5Roc3bK5e/8AfTpy/wDXH+xteT+x/X7M6/btN+Xiqa9qg2vq0BAnxA3rc1hriux9YAAAAAAAAAAAAZOmVfIarZ1s45lenL3SRjHMHzakW+Ckn7mgPRiB8weYJ9qR9AAAAAAAAAAAAI7t7HnbGaiscIRfsxJPJIjVbT27utmtSoRWXK2nhd6WV/AFDtb2BnKT7UAAAAAAAAAAAAE55K7Hy2s3V9KOY29JQi/7pP7J+8gxcfJ1p36HZejVmsVLuTrPKw8PdFe5J+IEP5UqTp7S0ai4VbaPvUmv9yR8ldHmbO3FZrHlbqWPYkl/OTB5WLN+S0++iniEp0ptLck0mv4ZJdh7J2WyVhTnFxnUg6sk+2Tb/hoCqNqbHo3aW+tkmoKq5wT/ANMv3L+ceBqSwOVbT+Zd2epQWI1IujNpdaeVnwb9xX4AAAAAAAAAAAD7pR51anHGczisduWkfBsNBoO61/T6CWefc00/YpJv6IC/IrCx2HIQAAAAAAAAAAAAfFSEalOdOazGaafenuPs4e9YA8931tKyvri0msSoVJU34NoxyW8pOnOz2ldzFYp3sFNPq5y3SX0T8SJAAAAAAAAAAABl6TYz1TVbawp5zXqKLeOC4t+CTZftClCjQhRpxUYQiowS6klhfRFc8lujudxcavWh+2CdGjlcW/8AifgsLxZZYGJqOn2mp2rtr6hGvRbTcJcMp7jJhGMIqMUkksJJYWD6AGj2w0vpfZu6t4xTqwj5Wl/3R3r3rK8SjlvPRpSO2mkPSNoq9OEcW9d+WpY4JNvK8Hle4DQAAAAAAAAAAASnk6s/1W1tGpjMbanKq/bjC+r+hFi0OSvTnS0251KosSuZqnT3f5Y8X4tv3AT1AAAAAAAAAAAAAAAAjO3eivWNn6nkYc65tm6tJdbwt8fFfVIpjxz3no1lRbf7NvStQlqFpSf6K5llpLdSqN5afYnxXflAQ8AAAAAAAAyLG0rX99QtLaPOq1pqMVjKy+t9y3t+wx28daLQ5ONm3Z0HrF7Tar144oRa3wg+Lx1N/wAe0CX6Pp1HStLt7C3X9OjBRy+LfFt97bbM4AAAABFdvdDesaI6tCPOurTNSkkt8lj90fFLK70iVBrIHnJb0CX7f7OS0nUHf20P8Fczy8LdTm97Xcnva8URAAAAAAAADgt4GRYWVbUb6hZW8c1q81GPYs8W+5LLL602ypadp9vZUF/ToU1Bd+Fxfe3v8SH8nezM7C36Wvabjc1o4pQksOnB9bXU39F7SdgAAAAAAAAAAAAAAAADourWheW9S3uacatGpHmyhJZTTO8AU3tXsbd6JOdzaKdxp7eVJLMqS7JLsXb78EWTysnoxpNNNJpkV1rYLR9TlKrQjKyrt5cqKXNb74vd7sAU6CaXfJrrNKTdrcWtxFcMtwfuaa+pgPYPaVPH6CD71Xhj+QI0HuTfYS625OderSSrK1t49blV5z9yT/kl2g7A6bpc4V7xu9uYvKc44pxfdHr9ryBHdidi5XtSnqerUnG1i1KlRksOq+ptf6e7r9nG0kkksBJI5AAAAAAAAAxb+yt9Qs6tpdU1Uo1YuMovs/2fY+0pvanZi62fu23GVWym8Uq6X/rLsf0fV2F3HTcW9G6oToXFKFWlNYlCaTTXY0B54BZus8mtCtOVXR7l27e/yNXMoruT4pe3JG6vJ9tHTb5lvQqJdcKyWffgCLAk0NgdpZyxKypQ75V44+jZtrDkxvajT1G/o0I9caMXNvxeEvqBBFGUpRjGLcpPEUllt9iXWWLsZsLKFSGo65TScWpUrWW/D6nNfwvf2Eq0TZXSdDxK0t+fXxh16r50/B8EvYkb0DhLCwcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVv5/at6PZfBP8h5/at6PZfBP8gAHn9q3o9l8E/yHn9q3o9l8E/yAAef2rej2XwT/Ief2rej2XwT/IAB5/at6PZfBP8AIef2rej2XwT/ACAAef2rej2XwT/Ief2rej2XwT/IAB5/at6PZfBP8h5/at6PZfBP8gAHn9q3o9l8E/yHn9q3o9l8E/yAAef2rej2XwT/ACHn9q3o9l8E/wAgAHn9q3o9l8E/yHn9q3o9l8E/yAAef2rej2XwT/Ief2rej2XwT/IAB5/at6PZfBP8h5/at6PZfBP8gAHn9q3o9l8E/wAh5/at6PZfBP8AIAB5/at6PZfBP8h5/at6PZfBP8gAHn9q3o9l8E/yHn9q3o9l8E/yAAef2rej2XwT/Ief2rej2XwT/IAB5/at6PZfBP8AIef2rej2XwT/ACAAef2rej2XwT/Ief2rej2XwT/IAB5/at6PZfBP8h5/at6PZfBP8gAHn9q3o9l8E/yHn9q3o9l8E/yAA//Z';
+        
+        var option_79a70e8f4d5742a7a42fa2c84ee69202 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "maskImage": maskImage_79a70e8f4d5742a7a42fa2c84ee69202,
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                15,
+                50
+            ],
+            "data": [
+                {
+                    "name": "\u535a\u7269\u9986",
+                    "value": "47",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,65,28)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6d3b\u52a8",
+                    "value": "25",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(16,88,62)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d9\u4e8b",
+                    "value": "24",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(106,24,13)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u63a5\u529b",
+                    "value": "20",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(70,92,130)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7b56\u5c55",
+                    "value": "20",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(131,160,87)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6570\u5b57",
+                    "value": "18",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(134,15,82)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9879\u76ee",
+                    "value": "14",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(141,128,157)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7814\u7a76",
+                    "value": "14",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(25,55,22)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u63a2\u7d22",
+                    "value": "13",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(19,115,135)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u865a\u62df",
+                    "value": "13",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(38,98,158)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5168\u7403",
+                    "value": "12",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(88,45,24)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b9e\u8df5",
+                    "value": "12",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(69,147,107)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u793e\u4ea4",
+                    "value": "11",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(66,78,83)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5a92\u4ecb",
+                    "value": "11",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(27,7,145)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u89c2\u4f17",
+                    "value": "11",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(96,79,57)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5a92\u4f53",
+                    "value": "10",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,57,3)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u56fd\u5bb6\u535a\u7269\u9986",
+                    "value": "9",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(136,6,127)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u73af\u5883",
+                    "value": "9",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(146,58,145)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6587\u5316",
+                    "value": "9",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(142,116,75)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6545\u4e8b",
+                    "value": "9",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(42,92,84)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d9\u8ff0",
+                    "value": "9",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(86,83,24)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f53\u9a8c",
+                    "value": "9",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(55,51,24)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d9\u4e8b\u5b66",
+                    "value": "8",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(113,34,54)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u76f4\u64ad",
+                    "value": "8",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(15,106,117)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9605\u8bfb",
+                    "value": "8",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(97,90,115)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e2d\u56fd",
+                    "value": "7",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(146,139,86)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u865a\u62df\u7a7a\u95f4",
+                    "value": "7",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(18,126,116)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e92\u52a8",
+                    "value": "7",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(123,107,54)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65f6\u95f4",
+                    "value": "7",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(90,125,15)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c55\u793a",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(17,76,141)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c1d\u8bd5",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(3,57,64)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f5c\u4e3a",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(106,29,127)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8d44\u6e90",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(138,108,149)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8bed\u6cd5",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(62,153,41)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65b9\u5f0f",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(11,32,38)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7a7a\u95f4",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(71,142,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "2020",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(43,159,78)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e30\u5bcc",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(115,148,5)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8bdd\u8bed",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(137,157,79)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9986\u957f",
+                    "value": "6",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(136,156,79)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u73cd\u85cf",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(94,50,53)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9694\u79bb",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(81,17,9)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b9a\u5236",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(48,109,7)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u539f\u6709",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(97,156,158)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7406\u8bba",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(57,71,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5f00\u653e\u6027",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(135,25,58)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b9e\u4f53",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(129,80,121)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5171\u540c",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(43,91,52)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5173\u7cfb",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(130,30,152)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8fd9\u4e9b",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(128,159,46)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6280\u672f",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(25,41,127)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e0d\u540c",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(88,80,56)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u85cf\u54c1",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(75,158,0)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7b56\u5212",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(63,116,82)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d9\u4e8b\u6587",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(144,61,20)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u610f\u4e49",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(155,130,41)"
+                        }
+                    }
+                },
+                {
+                    "name": "Digital",
+                    "value": "5",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(82,38,144)"
+                        }
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "normal": {
+                    "fontFamily": "\u534e\u6587\u884c\u6977"
+                },
+                "emphasis": {}
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u6570\u5b57\u865a\u62df\u7a7a\u95f4\u7684\u7b56\u5c55\u5b9e\u8df5\u521d\u63a2\u5173\u952e\u8bcd",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_79a70e8f4d5742a7a42fa2c84ee69202.setOption(option_79a70e8f4d5742a7a42fa2c84ee69202);
+    </script>
+</body>
+</html>
