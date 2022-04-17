@@ -26,3 +26,10 @@
 本作业模拟统计2014年-2019年每个季度的中国博物馆接收文物以及征集数量，使用time line记录每年四个季度的数据情况。（*数据不真实）
 
 [作业3链接](https://jianiqi.github.io/timeline_bar.html)
+
+
+
+## 第二次作业
+### 1.作业1
+（1）使用文本编辑器，用html设计一个网页；页面包含输入框、按钮和一些介绍文字，实现某个搜索引擎的搜索功能；先直接用html实现，再用bootstrap实现美观版式（扩展要求）
+[作业1.1链接]（https://jianiqi.github.io/blob/main/hw2/bing_search.html）
