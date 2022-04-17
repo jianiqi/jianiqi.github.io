@@ -32,4 +32,4 @@
 ## 第二次作业
 ### 1.作业1
 （1）使用文本编辑器，用html设计一个网页；页面包含输入框、按钮和一些介绍文字，实现某个搜索引擎的搜索功能；先直接用html实现，再用bootstrap实现美观版式（扩展要求）
-[作业1.1链接](https://jianiqi.github.io/blob/main/hw2/bing_search.html)
+[作业1.1链接](https://jianiqi.github.io/hw2/bing_search.html)
