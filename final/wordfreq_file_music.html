@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+
+</head>
+<body>
+    <div id="153e181f13b94d409b32819819c7eeeb" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_153e181f13b94d409b32819819c7eeeb = echarts.init(
+            document.getElementById('153e181f13b94d409b32819819c7eeeb'), 'white', {renderer: 'canvas'});
+            
+        var maskImage_153e181f13b94d409b32819819c7eeeb = new Image();
+        maskImage_153e181f13b94d409b32819819c7eeeb.src = 'data:image/jpg;base64,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';
+        
+        var option_153e181f13b94d409b32819819c7eeeb = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "maskImage": maskImage_153e181f13b94d409b32819819c7eeeb,
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                15,
+                50
+            ],
+            "data": [
+                {
+                    "name": "\u97f3\u4e50",
+                    "value": "142152",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(99,66,29)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6cbb\u7597",
+                    "value": "57624",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(148,1,107)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u75be\u75c5",
+                    "value": "38160",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(101,145,90)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u533b\u9662",
+                    "value": "29640",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(86,117,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8033\u9e23",
+                    "value": "26448",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(37,145,35)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5e2e\u52a9",
+                    "value": "24000",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(48,5,68)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5e0c\u671b",
+                    "value": "21264",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(144,26,86)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u58f0\u97f3",
+                    "value": "19512",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(52,111,45)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u60a3\u8005",
+                    "value": "17688",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(128,57,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u75c5\u4f8b",
+                    "value": "17496",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,2,10)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b69\u5b50",
+                    "value": "17136",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(117,134,89)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u63cf\u8ff0",
+                    "value": "17040",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(158,122,96)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u533b\u751f",
+                    "value": "14832",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(116,160,52)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u95ee\u8bca",
+                    "value": "13512",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(147,53,95)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u542c\u529b",
+                    "value": "13488",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(75,64,105)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u60c5\u7eea",
+                    "value": "12648",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(109,147,124)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5c31\u8bca",
+                    "value": "12552",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(17,110,139)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u60a3\u513f",
+                    "value": "12312",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(124,10,13)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u513f\u7ae5",
+                    "value": "11616",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(46,145,146)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8fc7\u654f\u53f2",
+                    "value": "10824",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(100,5,128)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5f71\u54cd",
+                    "value": "10320",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(144,28,158)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u60a3\u75c5",
+                    "value": "10272",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(7,60,61)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u56fe\u6587",
+                    "value": "10152",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(79,95,0)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65f6\u95f4",
+                    "value": "9864",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(103,117,98)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7814\u7a76",
+                    "value": "9840",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(85,82,102)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5e7b\u542c",
+                    "value": "9816",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(111,4,92)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6d3b\u52a8",
+                    "value": "9792",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(100,31,101)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5b66\u4e60",
+                    "value": "9744",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(44,138,55)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9700\u8981",
+                    "value": "9384",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(12,116,104)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4f5c\u7528",
+                    "value": "9384",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(122,102,52)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6548\u679c",
+                    "value": "9264",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(157,73,143)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6000\u5b55",
+                    "value": "9096",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(112,133,58)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u80fd\u529b",
+                    "value": "8640",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(15,153,107)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u95ee\u9898",
+                    "value": "8352",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(110,133,135)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65b9\u6cd5",
+                    "value": "8328",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(110,7,82)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8033\u6735",
+                    "value": "8064",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(20,153,26)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u75c7\u72b6",
+                    "value": "7872",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(128,26,55)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u79d1\u5ba4",
+                    "value": "7824",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(139,123,36)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u624b\u672f",
+                    "value": "7800",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(90,149,18)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7528\u836f",
+                    "value": "7776",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(90,74,98)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u534a\u5e74",
+                    "value": "7680",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(70,152,44)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5fc3\u7406",
+                    "value": "7584",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(97,112,4)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u97f3\u4e50\u7597\u6cd5",
+                    "value": "7488",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(51,9,67)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d1\u5c55",
+                    "value": "7344",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(81,156,71)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u68c0\u67e5",
+                    "value": "7272",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(66,35,16)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e50\u66f2",
+                    "value": "7008",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(81,61,66)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6bcf\u5929",
+                    "value": "6912",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(17,1,123)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u523a\u6fc0",
+                    "value": "6768",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(108,87,137)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u542c\u5230",
+                    "value": "6528",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(159,110,65)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u969c\u788d",
+                    "value": "6504",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(48,73,44)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8282\u594f",
+                    "value": "6480",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(8,14,89)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u53d1\u73b0",
+                    "value": "6456",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(4,112,116)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5927\u8111",
+                    "value": "6264",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(4,152,28)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6cbb\u7597\u5e08",
+                    "value": "6048",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(64,127,107)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6b63\u5e38",
+                    "value": "6024",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(135,26,120)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4ea7\u751f",
+                    "value": "5976",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(20,86,104)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u751f\u6d3b",
+                    "value": "5904",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(70,91,144)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u58f0\u5e26",
+                    "value": "5880",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(42,108,114)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5eb7\u590d",
+                    "value": "5808",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(4,16,21)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u65cb\u5f8b",
+                    "value": "5736",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(12,87,149)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u884c\u4e3a",
+                    "value": "5688",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(41,23,34)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u81ea\u95ed\u75c7",
+                    "value": "5640",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(145,33,99)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8bed\u8a00",
+                    "value": "5544",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(33,85,108)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8bad\u7ec3",
+                    "value": "5376",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(108,8,12)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e0d\u80fd",
+                    "value": "5352",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(119,135,18)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7126\u8651",
+                    "value": "5304",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(50,122,76)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u80ce\u513f",
+                    "value": "5304",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(57,72,40)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8fd0\u52a8",
+                    "value": "5232",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(154,28,14)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u542c\u89c9",
+                    "value": "5208",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(134,55,108)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u9009\u62e9",
+                    "value": "5184",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,60,60)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u559c\u6b22",
+                    "value": "5088",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(135,41,59)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8033\u673a",
+                    "value": "5088",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(16,17,78)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5177\u6709",
+                    "value": "5064",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(148,5,29)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6539\u5584",
+                    "value": "5064",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(51,58,154)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4e50\u5668",
+                    "value": "5040",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(59,105,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u529f\u80fd",
+                    "value": "5016",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(7,22,146)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u8868\u73b0",
+                    "value": "4920",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(91,90,70)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u63d0\u9ad8",
+                    "value": "4920",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(47,124,65)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u660e\u663e",
+                    "value": "4920",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(98,56,81)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u6b4c\u66f2",
+                    "value": "4872",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,82,9)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7761\u7720",
+                    "value": "4848",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(113,33,30)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u75c5\u60c5",
+                    "value": "4824",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(21,47,113)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u7cbe\u795e",
+                    "value": "4800",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(139,38,145)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u64ad\u653e",
+                    "value": "4800",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(33,52,53)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u97f3\u4e50\u58f0",
+                    "value": "4752",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(148,157,150)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5de6\u8033",
+                    "value": "4728",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(127,3,2)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u63a7\u5236",
+                    "value": "4656",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(95,148,32)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u5927\u4e8e",
+                    "value": "4536",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(11,134,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u4fc3\u8fdb",
+                    "value": "4512",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(3,17,128)"
+                        }
+                    }
+                },
+                {
+                    "name": "\u73af\u5883",
+                    "value": "4488",
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(62,98,40)"
+                        }
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "normal": {
+                    "fontFamily": "\u534e\u6587\u884c\u6977"
+                },
+                "emphasis": {}
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u597d\u5927\u592b\u7f51\u7ad9\u97f3\u4e50\u641c\u7d22\u5173\u952e\u8bcd",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_153e181f13b94d409b32819819c7eeeb.setOption(option_153e181f13b94d409b32819819c7eeeb);
+    </script>
+</body>
+</html>
